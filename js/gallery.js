@@ -82,6 +82,7 @@ function onGalleryClick(event) {
     event.preventDefault();
 
     const clickedImage = event.target;
+    if (clickedImage.nodeName !== "IMG") return;
 
     const largeImageSrc = clickedImage.dataset.source;
     openModal(largeImageSrc);
